@@ -1,0 +1,46 @@
+button {
+  border: none;
+  outline: none;
+  min-width: 100px;
+  text-align: center;
+  background-color: #DDDDDD;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  --ripple-background: #4a148c;
+  --ripple-opacity: 0.3;
+  --ripple-duration: 600ms;
+  padding: 10px 5px;
+  border-radius: 3px; }
+  button::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: var(--ripple-background, white);
+    border-radius: 50%;
+    pointer-events: none;
+    top: calc(var(--y) * 1px);
+    left: calc(var(--x) * 1px);
+    width: calc(var(--d) * 1px);
+    height: calc(var(--d) * 1px);
+    opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+    transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+    transform: translate(-50%, -50%) scale(var(--s, 2));
+    transform-origin: center; }
+
+.ripple-color-red {
+  --ripple-background: white; }
+
+.rainbow {
+  --ripple-opacity: 1;
+  --ripple-background: radial-gradient(circle at center, red, rebeccapurple, dodgerblue, olive, gold, orange, tomato);
+  --ripple-duration: 1000ms;
+  --ripple-easing: cubic-bezier(0, .2, .2, 1);
+  background-color: skyblue;
+  color: rgba(255, 255, 255, 0.7);
+  transition: background-color 300ms, color 300ms; }
+  .rainbow:hover {
+    background-color: #5bbce4;
+    color: white; }
+
+

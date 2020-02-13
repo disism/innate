@@ -1,0 +1,38 @@
+/*
+  ----------------
+  TABS
+  ----------------
+*/
+.tabHeader ul {
+  list-style-type: none;
+  text-align: center; }
+  .tabHeader ul button {
+    min-width: 0px;
+    border-radius: 0px;
+    padding: 10px 5px;
+    background-color: #ff79ff; }
+  .tabHeader ul li {
+    display: inline-block;
+    min-width: 50px;
+    text-align: center;
+    cursor: pointer; }
+
+.tabLiActive {
+  text-decoration: underline; }
+
+.tabBody {
+  color: aqua;
+  background-color: #1fc55f; }
+  .tabBody section {
+    display: none;
+    padding: 3rem; }
+
+.tabBodyActive {
+  display: block !important;
+  text-decoration: underline;
+  text-align: center; }
+
+.tabAddTab {
+  min-width: 35px;
+  border-radius: 50px; }
+
