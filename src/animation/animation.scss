@@ -1,0 +1,66 @@
+/*
+  ----------------
+  PULSE
+  ----------------
+*/
+.pulse {
+    width: 100%;
+    height: 10rem;
+    animation: pulse 3s infinite;
+}
+  
+@keyframes pulse {
+    0% {
+      background-color: #ff3d00;
+    }
+    100% {
+      background-color: #7b1fa2;
+    }
+}
+
+$tile-bg: #cfcfdf;
+
+/*
+  ----------------
+  LOADING BLOCK
+  ----------------
+*/
+
+.tiles {
+  display: flex;
+  flex-direction: row;
+}
+.tile {
+  background: $tile-bg;
+  border-radius: 4px;
+  height: 75px;
+  margin: 5px;
+  width: 100px;
+  animation: 1s ease 0s loadingPulse infinite;
+}
+
+@for $i from 1 through 9 {
+  .tile {
+    
+    &:nth-child(#{$i}) {
+      animation-delay: $i * (1s / 18);
+    }
+  }
+}
+
+@keyframes loadingPulse {
+  0% {
+    background: $tile-bg;
+    transform: scale(1);
+  }
+  
+  25% {
+    background: darken($tile-bg, 10%);
+    transform: scale(1.015);
+  }
+  
+  50% {
+    background: $tile-bg;
+    transform: scale(1);
+  }
+}

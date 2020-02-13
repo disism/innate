@@ -1,0 +1,33 @@
+@import './variables';
+
+@import './mixins';
+
+@import './flex';
+
+html,
+body {
+  min-height: 100%;
+}
+
+
+body {
+  background: white;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+img {
+  display:block;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+
+

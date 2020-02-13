@@ -1,0 +1,29 @@
+@import '../ripple/mixins';
+@import './mixins';
+
+$buttons-base-color: #DDDDDD;
+
+button {
+    border: none;
+    outline: none;
+    min-width: 100px;
+    text-align: center;
+    background-color: $buttons-base-color;
+    cursor: pointer;
+    @include ripple;
+    @include button-rpple();
+}
+
+.ripple-color-red {
+    --ripple-background: white;
+}
+.rainbow {
+    --ripple-opacity: 1;
+    --ripple-background: radial-gradient(circle at center, red, rebeccapurple, dodgerblue, olive, gold, orange, tomato);
+    --ripple-duration: 1000ms;
+    --ripple-easing: cubic-bezier(0, .2, .2, 1);
+    background-color: skyblue;
+    color: rgba(white, 0.7);
+    transition: background-color 300ms, color 300ms;
+    &:hover { background-color: darken(skyblue, 10%); color: rgba(white, 1);}
+}

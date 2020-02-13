@@ -1,0 +1,8 @@
+
+@mixin button-rpple {
+    --ripple-background: #4a148c;
+    --ripple-opacity: 0.3;  
+    --ripple-duration: 600ms;
+    padding: 10px 5px;
+    border-radius: 3px;
+}

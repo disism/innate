@@ -1,0 +1,55 @@
+@media screen and (min-width: $breakpoint-large) {
+
+}
+
+@media screen and (min-width: $breakpoint-large) {
+
+}
+/*
+  ----------------
+  FLEX
+  ----------------
+*/
+.flexCards {
+    max-width: 1380px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  
+  .flexCard {
+    display: block;
+    margin: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    width: 100%;
+    width: calc(100% - 20px);
+    background-color: #ffffff;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+    transition-duration: .2s;
+  
+    @media (min-width: 768px) {
+      max-width: 100%;
+      width: 50%;
+      width: calc(50% - 20px);
+    }
+  
+    @media (min-width: 1024px) {
+      width: 25%;
+      width: calc(25% - 20px);
+    }
+  }
+  
+  .label {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    span {
+      padding: 1rem;
+    }
+  }
